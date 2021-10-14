@@ -183,6 +183,11 @@ class Monster(Turtle):
         self.direction = "Up"
       elif warrior.ycor() < self.ycor():
         self.direction = "Down"
+  def destroy(self):
+    self.goto(-3000, -3000)
+    self.hideturtle()
+    
+
 
 # Instantiate Instruction, Score, Pen, and Warrior class
 instruction = Instruction()
@@ -281,6 +286,9 @@ def warrior_state():
     set_state(6)
   elif warrior.wealth >= 200:
     set_state(7)
+  elif warrior.wealth != 200 and len(treasures) == 0:
+    set_state(6)
+
 
 # Enable turtle to use keyboard arrow key - Keyboard Binding
 turtle.listen()
@@ -311,7 +319,10 @@ while True:
       warrior.wealth -= monster.wealth
       keep_score()
       warrior_state()
-      
+
+    #Destroy a monster that goes beyond the maze wall 
+    if monster.xcor() < -312 or monster.xcor() > 312 or monster.ycor() < -312 or monster.ycor() > 312:
+      monster.destroy()
   # Enable screen update
   screen.update()
 
