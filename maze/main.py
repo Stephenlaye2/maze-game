@@ -32,17 +32,17 @@ for gif in gif_imgs:
 class Instruction(Turtle):
   def __init__(self):
     Turtle.__init__(self)
-    self.color('blue')
+    self.color('cyan')
     self.penup()
     self.speed(0)
-    self.setposition(-288, 280)
+    self.setposition(-288, 288)
     self.hideturtle()
 
 class Score(Turtle):
    def __init__(self):
     Turtle.__init__(self)
     # self.shape(img_list[0])
-    self.color('white')
+    self.color('cyan')
     self.penup()
     self.speed(0)
     self.setposition(300, 320)
@@ -258,7 +258,7 @@ def setup_maze_level(levl_lst):
 setup_maze_level(levels[1])
 
 instruction_str = """
-To play the game, use the keyboar arrow keys.\nYou can collect treasure and avoid contacting the monsters.\nYou win the game when you get certain score.\nYou loose when your score runs below certain value.\nYou can draw a monster out of the maze into the darkness of unknown.
+To play the game, use the keyboar arrow keys.\nYou can collect treasure and avoid contacting the monsters.\nYou win the game when you get certain score.\nWhen your score runs below certain value, you loose.\nYou can draw a monster out of the maze into the darkness of unknown.
 """
 instruction.write(instruction_str, False, align='left', font=('Serif', 16, 'normal'))
 score.write('Score: 0', False, align='left', font=('Serif', 16, 'normal'))

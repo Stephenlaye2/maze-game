@@ -14,18 +14,54 @@
   <script type="text/javascript" src="/maze/js/script.js"></script>
 
   <style>
+    body {
+      padding: 2rem;
+    }
+
+    .info {
+      margin: 1rem;
+    }
+
+    img {
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
     #mycanvas {
       background-color: black;
+    }
+
+    form {
+      text-align: center;
+      margin: 0 2rem;
+    }
+
+    button {
+      color: #fff;
+      font-weight: bold;
+      width: 5rem;
+      border-radius: 4px;
+    }
+
+    p {
+      font-size: 1.2rem;
     }
   </style>
 
 </head>
 
 <body>
-  <p>Due to some limitation in Skulpt (language for providing Python to the browser), this game cannot achieve its
-    standard functionality. However, the code for the standard functionality has been provided in Github repository.</p>
-  <p>The game is developed using Python 3.x</p>
-  <p>When you are in the main.py directory, run python3 main.py</p>
+  <div class="info">
+    <p>Due to some limitation in Skulpt (language for providing Python to the browser), this game cannot achieve its
+      standard functionality. However, the code for the standard functionality has been provided in Github repository
+      (<a href="https://github.com/Stephenlaye2/maze-game">https://github.com/Stephenlaye2/maze-game</a>).</p>
+    <p>The game is developed using Python 3.x</p>
+    <p>When you are in the main.py directory, run python3 main.py</p>
+  </div>
+  <p>The following image shows what the game looks like</p>
+  <img src="img/maze_game.png" alt="Maze Game">
+
+
   <form>
     <textarea id="yourcode" cols="40" rows="10">
 import turtle
@@ -289,7 +325,8 @@ while True:
   screen.update()
  
     </textarea><br />
-    <button type="button" onclick="runit()">Run</button>
+    <p>Press the run button to generate the typical maze</p>
+    <button type="button" onclick="runit()" style="background-color: blue; text-align: center;">Run</button>
   </form>
   <!-- <button type="button" onclick="runit()">Run</button> -->
   <pre id="output"></pre>
