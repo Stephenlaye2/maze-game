@@ -75,26 +75,26 @@ class Warrior(Turtle):
       self.goto(x, y)
 
   def move_up(self):
-    coord_x = warrior.xcor()
-    coord_y = warrior.ycor() + 24
+    coord_x = self.xcor()
+    coord_y = self.ycor() + 24
     self.move(coord_x, coord_y)
     
 
   def move_down(self):
-     coord_x = warrior.xcor()
-     coord_y = warrior.ycor() - 24
+     coord_x = self.xcor()
+     coord_y = self.ycor() - 24
      self.move(coord_x, coord_y)
 
   def move_left(self):
-     coord_x = warrior.xcor() - 24
-     coord_y = warrior.ycor()
+     coord_x = self.xcor() - 24
+     coord_y = self.ycor()
      self.shape(img_list[2])
      self.move(coord_x, coord_y)
      
 
   def move_right(self):
-     coord_x = warrior.xcor() + 24
-     coord_y = warrior.ycor() 
+     coord_x = self.xcor() + 24
+     coord_y = self.ycor() 
      self.shape(img_list[1])
      self.move(coord_x, coord_y)
   
