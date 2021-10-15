@@ -284,9 +284,9 @@ def set_state(img_index):
 def warrior_state():
   if warrior.wealth <= -100:
     set_state(6)
-  elif warrior.wealth >= 200:
+  elif warrior.wealth >= 450:
     set_state(7)
-  elif warrior.wealth != 200 and len(treasures) == 0:
+  elif warrior.wealth != 450 and len(treasures) == 0:
     set_state(6)
 
 
